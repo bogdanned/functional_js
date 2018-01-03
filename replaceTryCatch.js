@@ -1,5 +1,5 @@
 // Replace Try Catch with function Objects
-import fs from 'fs'
+const fs = require('fs')
 
 const Right = x => ({
     map: f => Right(f(x)),
@@ -26,7 +26,7 @@ const tryCatch = f => {
 }
 
 const getPort = () =>
-    tryCatch(() => fs.readFileSync(config.json))
+    tryCatch(() => fs.readFileSync('./config.json'))
     .map(c => JSON.parse(c))
     .fold(e => 3000, c => c.port)
 
