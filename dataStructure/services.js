@@ -22,7 +22,7 @@ module.exports = [
         ]
     },
     {
-        id: "1",
+        id: "3",
         name: "service3",
         price: 134,        
         products: [
